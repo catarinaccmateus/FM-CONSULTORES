@@ -1,8 +1,17 @@
+/* SET-UP */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 $color-logo: #ffb400;
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
+
+.container {
+  min-height: 300px;
+}
+
+/* NAVBAR */
 
 .navbar {
   height: 70px;
@@ -10,7 +19,6 @@ body {
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
-  color: blue;
   text-align: center;
   background-color: grey;
   display: flex;
@@ -36,6 +44,74 @@ body {
   width: 100px;
 }
 
+#menu {
+  display: none;
+  background-color: grey;
+  padding: 1em;
+}
+
+#navbar-icon {
+  color: black;
+  display: block;
+  position: absolute;
+  margin-top: 1em;
+  margin-right: 1em;
+  right: 0;
+  top: 0;
+  border: none;
+  background: none;
+  div {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 4px 0;
+  }
+}
+
+/* TITLE CONTAINER */
+
+.title-container {
+  margin-top: 70px;
+  background-image: url("./../images/FM-CARTA.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 4px grey;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+/* SERVICES CONTAINER */
+
+.services-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  div {
+    padding: 1em;
+  }
+}
+
+/* CLIENTS */
+
+.clients-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  img {
+    margin: 0.5em;
+    max-width: 100px;
+  }
+}
+
+/* FOOTER */
+
 .footer {
   left: 0;
   bottom: 0;
@@ -45,22 +121,18 @@ body {
   height: 70px;
 }
 
-#menu {
-  display: none;
+.footer-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-#navbar-icon {
-  color: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+.footer-contents h6 {
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 
-.container {
-  height: 200px;
-}
-
-.title-container {
-  margin-top: 120px;
+.footer-contents p {
+  margin-top: 1em;
+  margin-bottom: 0;
 }

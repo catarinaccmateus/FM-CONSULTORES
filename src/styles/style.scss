@@ -1,0 +1,66 @@
+$color-logo: #ffb400;
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  height: 70px;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  color: blue;
+  text-align: center;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-logo {
+  height: 70px;
+  margin-left: 1em;
+}
+
+.navbar-menu {
+  list-style-type: none;
+}
+
+.navbar-link {
+  color: black;
+}
+
+.fm-logo {
+  width: 100px;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  height: 70px;
+}
+
+#menu {
+  display: none;
+}
+
+#navbar-icon {
+  color: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container {
+  height: 200px;
+}
+
+.title-container {
+  margin-top: 120px;
+}

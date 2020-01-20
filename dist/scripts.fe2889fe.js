@@ -194,17 +194,6 @@ module.hot.accept(reloadCSS);
 
 require("./../styles/style.scss");
 
-function getMobileMenu() {
-  console.log("clicked on menu");
-  /*
-  var x = document.getElementById("menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }*/
-}
-
 document.getElementById("navbar-icon").onclick = function () {
   var x = document.getElementById("menu");
 
@@ -242,7 +231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50111" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

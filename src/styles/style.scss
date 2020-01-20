@@ -1,5 +1,5 @@
 /* SET-UP */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Gelasio&display=swap");
 $color-logo: #ffb400;
 
 body {
@@ -32,21 +32,24 @@ h1 {
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  background-color: grey;
+  background-color: $color-logo;
   display: flex;
   justify-content: space-between;
   position: fixed;
   width: 100%;
 }
 
+.lessOpacity {
+  opacity: 0.7;
+}
+
 .navbar-logo {
-  height: 70px;
+  height: 60px;
   margin-left: 1em;
 }
 
 .navbar-menu {
   list-style-type: none;
-
 }
 
 .navbar-link {
@@ -61,7 +64,7 @@ h1 {
   display: flex;
   flex-direction: row;
   color: white;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Gelasio", serif;
   align-items: center;
   div {
     padding-left: 0;
@@ -73,7 +76,7 @@ h1 {
 @media (max-width: 768px) {
   #menu {
     display: none;
-    background-color: grey;
+    background-color: $color-logo;
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
@@ -89,6 +92,7 @@ h1 {
     top: 0;
     border: none;
     background: none;
+    outline:none;
     div {
       width: 30px;
       height: 4px;
@@ -114,25 +118,37 @@ h1 {
 
 .title-container {
   margin-top: 70px;
-  background-image: url("./../images/FM-CARTA.jpg");
+  /*
+  background-image: url("./../images/fm-diagram.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 500px;
   h1 {
     text-align: center;
     font-size: 2em;
     text-shadow: 2px 2px 2px $color-logo;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Gelasio", serif;
+    font-weight: 100;
     margin: 0.5em;
+  }
+  img {
+    width: 80%;
   }
 }
 
 @media (min-width: 769px) {
-  .title-container h1 {
-    font-size: 4em;
+  .title-container {
+    height: 600px;
+    h1 {
+      font-size: 4em;
+    }
+    img {
+      width: 60%;
+    }
   }
 }
 
@@ -213,6 +229,9 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    div {
+      text-align: center;
+    }
   }
   img {
     max-width: 100px;
@@ -244,7 +263,8 @@ h1 {
   justify-content: space-around;
   img {
     margin: 0.5em;
-    max-width: 100px;
+    max-width: 30%;
+    height: auto;
   }
 }
 

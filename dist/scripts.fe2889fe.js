@@ -189,11 +189,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\FM-CARTA.jpg":[["FM-CARTA.77e2fd6e.jpg","../../images/FM-CARTA.jpg"],"../../images/FM-CARTA.jpg"],"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../scripts/index.js":[function(require,module,exports) {
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../scripts/index.js":[function(require,module,exports) {
 "use strict";
 
 require("./../styles/style.scss");
 
+//To show/hide hamburger menu from navbar
 document.getElementById("navbar-icon").onclick = function () {
   var x = document.getElementById("menu");
 
@@ -202,7 +203,56 @@ document.getElementById("navbar-icon").onclick = function () {
   } else {
     x.style.display = "block";
   }
-};
+}; //To add less opacity in navbar when scrolling down
+
+
+var scrollpos = window.scrollY;
+var navbar = document.getElementById("nav");
+
+function add_class_on_scroll() {
+  navbar.classList.add("lessOpacity");
+}
+
+function remove_class_on_scroll() {
+  navbar.classList.remove("lessOpacity");
+}
+
+window.addEventListener("scroll", function () {
+  scrollpos = window.scrollY;
+
+  if (scrollpos > 20) {
+    add_class_on_scroll();
+  } else {
+    remove_class_on_scroll();
+  }
+}); //Client logos caroussel
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length - 2) {
+    slideIndex = 1;
+  }
+
+  if (slideIndex <= slides.length - 2) {
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex].style.display = "block";
+    slides[slideIndex + 1].style.display = "block";
+  }
+
+  console.log('index', slideIndex, 'length', slides.length);
+  setTimeout(showSlides, 1000); // Change image every 2 seconds
+}
 },{"./../styles/style.scss":"../../styles/style.scss"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -231,7 +281,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56820" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59342" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

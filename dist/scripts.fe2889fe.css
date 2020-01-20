@@ -1,5 +1,5 @@
 /* SET-UP */
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Gelasio&display=swap");
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -29,15 +29,19 @@ h1 {
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  background-color: grey;
+  background-color: #ffb400;
   display: flex;
   justify-content: space-between;
   position: fixed;
   width: 100%;
 }
 
+.lessOpacity {
+  opacity: 0.7;
+}
+
 .navbar-logo {
-  height: 70px;
+  height: 60px;
   margin-left: 1em;
 }
 
@@ -57,7 +61,7 @@ h1 {
   display: flex;
   flex-direction: row;
   color: white;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Gelasio", serif;
   align-items: center;
 }
 .logo-with-description div {
@@ -69,7 +73,7 @@ h1 {
 @media (max-width: 768px) {
   #menu {
     display: none;
-    background-color: grey;
+    background-color: #ffb400;
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
@@ -85,6 +89,7 @@ h1 {
     top: 0;
     border: none;
     background: none;
+    outline: none;
   }
   #navbar-icon div {
     width: 30px;
@@ -108,25 +113,37 @@ h1 {
 /* TITLE CONTAINER */
 .title-container {
   margin-top: 70px;
-  background-image: url("/FM-CARTA.77e2fd6e.jpg");
+  /*
+  background-image: url("./../images/fm-diagram.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 500px;
 }
 .title-container h1 {
   text-align: center;
   font-size: 2em;
   text-shadow: 2px 2px 2px #ffb400;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Gelasio", serif;
+  font-weight: 100;
   margin: 0.5em;
+}
+.title-container img {
+  width: 80%;
 }
 
 @media (min-width: 769px) {
+  .title-container {
+    height: 600px;
+  }
   .title-container h1 {
     font-size: 4em;
+  }
+  .title-container img {
+    width: 60%;
   }
 }
 /* ABOUT CONTAINER */
@@ -203,6 +220,9 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.services-container div div {
+  text-align: center;
+}
 .services-container img {
   max-width: 100px;
 }
@@ -230,7 +250,8 @@ h1 {
 }
 .clients-container img {
   margin: 0.5em;
-  max-width: 100px;
+  max-width: 30%;
+  height: auto;
 }
 
 /* FOOTER */

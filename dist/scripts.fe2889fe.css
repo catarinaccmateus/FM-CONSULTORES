@@ -37,7 +37,7 @@ h1 {
 }
 
 .lessOpacity {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .navbar-logo {
@@ -51,6 +51,10 @@ h1 {
 
 .navbar-link {
   color: black;
+}
+.navbar-link:hover {
+  color: white;
+  font-weight: bold;
 }
 
 .fm-logo {
@@ -98,6 +102,14 @@ h1 {
     margin: 4px 0;
   }
 }
+.first-line {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.second-line {
+  transform: rotate(-135deg);
+}
+
 @media (min-width: 769px) {
   #menu {
     display: flex !important;
@@ -113,11 +125,6 @@ h1 {
 /* TITLE CONTAINER */
 .title-container {
   margin-top: 70px;
-  /*
-  background-image: url("./../images/fm-diagram.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,7 +144,7 @@ h1 {
 
 @media (min-width: 769px) {
   .title-container {
-    height: 600px;
+    height: 640px;
   }
   .title-container h1 {
     font-size: 4em;
@@ -164,6 +171,7 @@ h1 {
 @media (max-width: 768px) {
   #about {
     padding: 1em;
+    text-align: center;
   }
 }
 /* PARTNERS CONTAINER */
@@ -240,6 +248,7 @@ h1 {
 /* CLIENTS */
 #clients {
   margin: 1em;
+  height: 650px;
 }
 
 .clients-container {
@@ -247,13 +256,27 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
-.clients-container img {
-  margin: 0.5em;
-  max-width: 30%;
-  height: auto;
+.clients-container .slides {
+  margin: auto 1%;
+  width: 28%;
+  align-self: center;
 }
 
+@media (max-width: 768px) {
+  #clients {
+    height: 400px;
+  }
+  #clients .clients-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #clients .clients-container .slides {
+    width: 40%;
+  }
+}
 /* FOOTER */
 #contacts {
   left: 0;
@@ -283,26 +306,33 @@ h1 {
 .footer-contents div img:hover {
   box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
 }
+.footer-contents div .email-link {
+  color: white;
+  text-decoration: underline;
+}
 .footer-contents div div {
   margin-top: 1em;
 }
 .footer-contents h6 {
   margin-top: 1em;
   margin-bottom: 0;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 .footer-contents p {
   margin-top: 1em;
   margin-bottom: 0;
 }
 .footer-contents .social-logo {
-  width: 15px;
+  width: 25px;
 }
 
 @media (max-width: 768px) {
   .footer-contents {
     display: flex;
     flex-direction: column;
+  }
+  .footer-contents h6 {
+    font-size: 1em;
   }
   .footer-contents div {
     width: 100%;

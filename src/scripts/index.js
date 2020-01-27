@@ -4,10 +4,13 @@ import "./../styles/style.scss";
 
 document.getElementById("navbar-icon").onclick = function() {
   var x = document.getElementById("menu");
+  var y = document.getElementById("navbar-icon");
   if (x.style.display === "block") {
     x.style.display = "none";
+    y.innerHTML = "<div></div><div></div><div></div>"
   } else {
     x.style.display = "block";
+    y.innerHTML = "<div class=first-line></div><div class=second-line></div>";
   }
 };
 
@@ -38,6 +41,7 @@ window.addEventListener("scroll", function() {
 
 //Client logos caroussel
 
+
 let slideIndex = 0;
 showSlides();
 
@@ -54,6 +58,6 @@ function showSlides() {
   slides[slideIndex].style.display = "block";
   slides[slideIndex+1].style.display = "block";
   }
-  console.log('index', slideIndex, 'length', slides.length);
-  setTimeout(showSlides, 1000); // Change image every 2 seconds
+ // console.log('index', slideIndex, 'length', slides.length);
+  setTimeout(showSlides, 500); // Change image every 2 seconds
 }

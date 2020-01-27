@@ -197,11 +197,14 @@ require("./../styles/style.scss");
 //To show/hide hamburger menu from navbar
 document.getElementById("navbar-icon").onclick = function () {
   var x = document.getElementById("menu");
+  var y = document.getElementById("navbar-icon");
 
   if (x.style.display === "block") {
     x.style.display = "none";
+    y.innerHTML = "<div></div><div></div><div></div>";
   } else {
     x.style.display = "block";
+    y.innerHTML = "<div class=first-line></div><div class=second-line></div>";
   }
 }; //To add less opacity in navbar when scrolling down
 
@@ -248,10 +251,10 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex].style.display = "block";
     slides[slideIndex + 1].style.display = "block";
-  }
+  } // console.log('index', slideIndex, 'length', slides.length);
 
-  console.log('index', slideIndex, 'length', slides.length);
-  setTimeout(showSlides, 1000); // Change image every 2 seconds
+
+  setTimeout(showSlides, 500); // Change image every 2 seconds
 }
 },{"./../styles/style.scss":"../../styles/style.scss"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -281,7 +284,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59342" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52824" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

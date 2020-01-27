@@ -40,7 +40,7 @@ h1 {
 }
 
 .lessOpacity {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .navbar-logo {
@@ -54,6 +54,10 @@ h1 {
 
 .navbar-link {
   color: black;
+  &:hover {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 .fm-logo {
@@ -92,7 +96,7 @@ h1 {
     top: 0;
     border: none;
     background: none;
-    outline:none;
+    outline: none;
     div {
       width: 30px;
       height: 4px;
@@ -100,6 +104,13 @@ h1 {
       margin: 4px 0;
     }
   }
+}
+
+.first-line {
+  transform: translateY(8px) rotate(135deg);
+}
+.second-line {
+  transform: rotate(-135deg);
 }
 
 @media (min-width: 769px) {
@@ -118,11 +129,6 @@ h1 {
 
 .title-container {
   margin-top: 70px;
-  /*
-  background-image: url("./../images/fm-diagram.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +148,7 @@ h1 {
 
 @media (min-width: 769px) {
   .title-container {
-    height: 600px;
+    height: 640px;
     h1 {
       font-size: 4em;
     }
@@ -171,6 +177,7 @@ h1 {
 @media (max-width: 768px) {
   #about {
     padding: 1em;
+    text-align: center;
   }
 }
 
@@ -254,6 +261,7 @@ h1 {
 
 #clients {
   margin: 1em;
+  height: 650px;
 }
 
 .clients-container {
@@ -261,10 +269,27 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  img {
-    margin: 0.5em;
-    max-width: 30%;
-    height: auto;
+  align-items: center;
+  .slides {
+    margin: auto 1%;
+    width: 28%;
+    // height: 100%;
+    // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #clients {
+    height: 400px;
+    .clients-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .slides {
+        width: 40%;
+      }
+    }
   }
 }
 
@@ -296,6 +321,10 @@ h1 {
         box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
       }
     }
+    .email-link {
+      color: white;
+      text-decoration: underline;
+    }
     div {
       margin-top: 1em;
     }
@@ -303,14 +332,14 @@ h1 {
   h6 {
     margin-top: 1em;
     margin-bottom: 0;
-    font-size: 1em;
+    font-size: 1.5em;
   }
   p {
     margin-top: 1em;
     margin-bottom: 0;
   }
   .social-logo {
-    width: 15px;
+    width: 25px;
   }
 }
 
@@ -318,6 +347,9 @@ h1 {
   .footer-contents {
     display: flex;
     flex-direction: column;
+    h6 {
+      font-size: 1em;
+    }
     div {
       width: 100%;
       img {

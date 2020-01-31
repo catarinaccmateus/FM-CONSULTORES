@@ -16,7 +16,7 @@ li {
 }
 
 .container {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 h1 {
@@ -146,6 +146,30 @@ h1 {
   }
 }
 
+/* TESTING HOW TO ADD CAROUSEL TO THE BACKGROUND IMAGE OF THE TITLE CONTAINER
+
+.background-image-1 {
+  background-image: url('./../images/fm-diagram.jpg');
+  background-size: cover;
+}
+
+.background-image-2 {
+  background-image: url('./../images/fm-entrance.jpg');
+  background-size: cover;
+}
+
+.background-image-3 {
+  background-image: url('./../images/FM-CARTA.jpg');
+  background-size: cover;
+}
+
+.background-image-4 {
+  background-image: url('./../images/fm-archives.jpg');
+  background-size: cover;
+}
+*/
+
+
 @media (min-width: 769px) {
   .title-container {
     height: 640px;
@@ -261,7 +285,7 @@ h1 {
 
 #clients {
   margin: 1em;
-  height: 650px;
+  text-align: center;
 }
 
 .clients-container {
@@ -270,9 +294,11 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   .slides {
     margin: auto 1%;
-    width: 28%;
+    max-height: 200px;
+    width: auto;
     // height: 100%;
     // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
     align-self: center;
@@ -281,13 +307,14 @@ h1 {
 
 @media (max-width: 768px) {
   #clients {
-    height: 400px;
     .clients-container {
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       .slides {
-        width: 40%;
+        max-height: 100px;
+        width: auto;
+        margin-bottom: 0.5em;
       }
     }
   }
@@ -310,20 +337,31 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 1em;
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    div {
+      margin-bottom: 1em;
+      h6 {
+        color: $color-logo;
+      }
+      .email-link {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
   .address-map {
     text-align: center;
-  }
-  div {
-    width: 50%;
     img {
       width: 80%;
       &:hover {
         box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
       }
     }
-    .email-link {
-      color: white;
-      text-decoration: underline;
+    div {
+      width: 50%;
     }
     div {
       margin-top: 1em;

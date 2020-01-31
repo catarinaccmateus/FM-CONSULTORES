@@ -14,7 +14,7 @@ li {
 }
 
 .container {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 h1 {
@@ -142,6 +142,28 @@ h1 {
   width: 80%;
 }
 
+/* TESTING HOW TO ADD CAROUSEL TO THE BACKGROUND IMAGE OF THE TITLE CONTAINER
+
+.background-image-1 {
+  background-image: url('./../images/fm-diagram.jpg');
+  background-size: cover;
+}
+
+.background-image-2 {
+  background-image: url('./../images/fm-entrance.jpg');
+  background-size: cover;
+}
+
+.background-image-3 {
+  background-image: url('./../images/FM-CARTA.jpg');
+  background-size: cover;
+}
+
+.background-image-4 {
+  background-image: url('./../images/fm-archives.jpg');
+  background-size: cover;
+}
+*/
 @media (min-width: 769px) {
   .title-container {
     height: 640px;
@@ -248,7 +270,7 @@ h1 {
 /* CLIENTS */
 #clients {
   margin: 1em;
-  height: 650px;
+  text-align: center;
 }
 
 .clients-container {
@@ -257,24 +279,25 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
 }
 .clients-container .slides {
   margin: auto 1%;
-  width: 28%;
+  max-height: 200px;
+  width: auto;
   align-self: center;
 }
 
 @media (max-width: 768px) {
-  #clients {
-    height: 400px;
-  }
   #clients .clients-container {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   #clients .clients-container .slides {
-    width: 40%;
+    max-height: 100px;
+    width: auto;
+    margin-bottom: 0.5em;
   }
 }
 /* FOOTER */
@@ -294,23 +317,34 @@ h1 {
   align-items: center;
   padding: 1em;
 }
-.footer-contents .address-map {
-  text-align: center;
+.footer-contents .contact-details {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
-.footer-contents div {
-  width: 50%;
+.footer-contents .contact-details div {
+  margin-bottom: 1em;
 }
-.footer-contents div img {
-  width: 80%;
+.footer-contents .contact-details div h6 {
+  color: #ffb400;
 }
-.footer-contents div img:hover {
-  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-}
-.footer-contents div .email-link {
+.footer-contents .contact-details div .email-link {
   color: white;
   text-decoration: underline;
 }
-.footer-contents div div {
+.footer-contents .address-map {
+  text-align: center;
+}
+.footer-contents .address-map img {
+  width: 80%;
+}
+.footer-contents .address-map img:hover {
+  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+.footer-contents .address-map div {
+  width: 50%;
+}
+.footer-contents .address-map div {
   margin-top: 1em;
 }
 .footer-contents h6 {

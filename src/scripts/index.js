@@ -59,5 +59,30 @@ function showSlides() {
   slides[slideIndex+1].style.display = "block";
   }
  // console.log('index', slideIndex, 'length', slides.length);
-  setTimeout(showSlides, 500); // Change image every 2 seconds
+  setTimeout(showSlides, 500); 
 }
+
+
+
+/*
+//Title caroussel testing
+
+showSlides();
+
+let numberOfImage = 1;
+let classNameOfImage = `background-image-1`;
+
+function showSlides() {
+const titleContainter = document.getElementById('title');
+titleContainter.classList.remove(classNameOfImage);
+if (numberOfImage <4) {
+  numberOfImage++;
+} else {
+  numberOfImage = 1;
+}
+console.log(classNameOfImage);
+classNameOfImage = `background-image-${numberOfImage}`
+titleContainter.classList.add(classNameOfImage);
+  setTimeout(showSlides, 1000); 
+}
+*/

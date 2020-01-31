@@ -23,6 +23,12 @@ h1 {
   font-size: 3em;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 1.5em;
+  }
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -85,6 +91,7 @@ h1 {
     padding-top: 2em;
     line-height: 1.5em;
     height: 150px;
+    border-radius: 0px 0px 0px 25px;
     li {
       margin-top: 0.6em;
     }
@@ -136,7 +143,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 580px;
   h1 {
     text-align: center;
     font-size: 2em;
@@ -172,7 +179,6 @@ h1 {
   background-size: cover;
 }
 */
-
 
 @media (min-width: 769px) {
   .title-container {
@@ -305,8 +311,16 @@ h1 {
     width: auto;
     // height: 100%;
     // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
-   // align-self: center;
-   max-width: 30%;
+    // align-self: center;
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 769px) {
+  #clients {
+    p {
+      margin-bottom: 4em;
+    }
   }
 }
 
@@ -364,11 +378,16 @@ h1 {
   }
   .address-map {
     text-align: center;
-    img {
+    #map-computer {
+      display: inherit;
       width: 80%;
+      border-radius: 5px;
       &:hover {
         box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
       }
+    }
+    #map-mobile {
+      display: none;
     }
     div {
       width: 50%;
@@ -392,24 +411,30 @@ h1 {
 }
 
 @media (max-width: 768px) {
-#contacts {
-  height: 650px;
-}
-  .footer-contents {
-    display: flex;
-    flex-direction: column;
-    .contact-details {
-      padding-top: 2em;
-    h6 {
-      font-size: 1em;
-    }
-  }
-    div {
-      width: 100%;
-      img {
+  #contacts {
+    height: 100%;
+
+    .footer-contents {
+      display: flex;
+      flex-direction: column;
+      .contact-details {
+        padding-top: 2em;
+        h6 {
+          font-size: 1em;
+        }
+      }
+      div {
         width: 100%;
-        margin-top: 1em;
+        #map-mobile {
+          width: 90%;
+          margin-top: 1em;
+          display: inherit;
+          border-radius: 5px;
+        }
+        #map-computer {
+          display: none;
+        }
       }
     }
-}
+  }
 }

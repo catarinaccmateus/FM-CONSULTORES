@@ -206,14 +206,18 @@ document.getElementById("navbar-icon").onclick = function () {
     x.style.display = "block";
     y.innerHTML = "<div class=first-line></div><div class=second-line></div>";
   }
-}; //To hide menu when clicking on window.
-// ( .... ) Still need to write this code.
+}; //To hide menu when clicking on window or menu links;
 
+
+var menuLinks = document.getElementsByClassName('navbar-link');
+
+for (var i = 0; i < menuLinks.length; i++) {
+  menuLinks[i].addEventListener("click", hideMenu);
+}
 
 document.getElementById('siteContent').addEventListener("click", hideMenu);
 
 function hideMenu() {
-  console.log('clicked!');
   var x = document.getElementById("menu");
   var y = document.getElementById("navbar-icon");
 
@@ -251,8 +255,8 @@ var clientsCarousel = setInterval(showSlides, 1500);
 function showSlides() {
   var slides = document.getElementsByClassName("slides");
 
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  for (var _i = 0; _i < slides.length; _i++) {
+    slides[_i].style.display = "none";
   }
 
   slideIndex++;
@@ -356,7 +360,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51849" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -21,6 +21,11 @@ h1 {
   font-size: 3em;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 1.5em;
+  }
+}
 /* NAVBAR */
 .navbar {
   height: 70px;
@@ -82,6 +87,7 @@ h1 {
     padding-top: 2em;
     line-height: 1.5em;
     height: 150px;
+    border-radius: 0px 0px 0px 25px;
   }
   #menu li {
     margin-top: 0.6em;
@@ -132,7 +138,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 580px;
 }
 .title-container h1 {
   text-align: center;
@@ -275,7 +281,6 @@ h1 {
 #clients {
   margin: 1em;
   text-align: center;
-  height: 600px;
 }
 
 .clients-container {
@@ -293,7 +298,15 @@ h1 {
   max-width: 30%;
 }
 
+@media (min-width: 769px) {
+  #clients p {
+    margin-bottom: 4em;
+  }
+}
 @media (max-width: 768px) {
+  #clients {
+    height: 600px;
+  }
   #clients .clients-container {
     flex-direction: column;
     justify-content: center;
@@ -344,11 +357,16 @@ h1 {
 .footer-contents .address-map {
   text-align: center;
 }
-.footer-contents .address-map img {
+.footer-contents .address-map #map-computer {
+  display: inherit;
   width: 80%;
+  border-radius: 5px;
 }
-.footer-contents .address-map img:hover {
+.footer-contents .address-map #map-computer:hover {
   box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+.footer-contents .address-map #map-mobile {
+  display: none;
 }
 .footer-contents .address-map div {
   width: 50%;
@@ -371,25 +389,29 @@ h1 {
 
 @media (max-width: 768px) {
   #contacts {
-    height: 650px;
+    height: 100%;
   }
-
-  .footer-contents {
+  #contacts .footer-contents {
     display: flex;
     flex-direction: column;
   }
-  .footer-contents .contact-details {
+  #contacts .footer-contents .contact-details {
     padding-top: 2em;
   }
-  .footer-contents .contact-details h6 {
+  #contacts .footer-contents .contact-details h6 {
     font-size: 1em;
   }
-  .footer-contents div {
+  #contacts .footer-contents div {
     width: 100%;
   }
-  .footer-contents div img {
-    width: 100%;
+  #contacts .footer-contents div #map-mobile {
+    width: 90%;
     margin-top: 1em;
+    display: inherit;
+    border-radius: 5px;
+  }
+  #contacts .footer-contents div #map-computer {
+    display: none;
   }
 }
 

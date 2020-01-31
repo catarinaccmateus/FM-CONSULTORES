@@ -14,14 +14,16 @@ document.getElementById("navbar-icon").onclick = function() {
   }
 };
 
-//To hide menu when clicking on window.
-// ( .... ) Still need to write this code.
+//To hide menu when clicking on window or menu links;
 
+let menuLinks = document.getElementsByClassName('navbar-link');
+for (let i = 0; i <menuLinks.length; i++) {
+  menuLinks[i].addEventListener("click", hideMenu);
+}
 
 document.getElementById('siteContent').addEventListener("click", hideMenu);
 
 function hideMenu() {
-  console.log('clicked!');
   const x = document.getElementById("menu");
   const y = document.getElementById("navbar-icon");
   if (x.style.display === "block") {

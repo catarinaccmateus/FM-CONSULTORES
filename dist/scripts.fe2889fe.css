@@ -81,6 +81,10 @@ h1 {
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
+    height: 150px;
+  }
+  #menu li {
+    margin-top: 0.6em;
   }
 
   #navbar-icon {
@@ -271,6 +275,7 @@ h1 {
 #clients {
   margin: 1em;
   text-align: center;
+  height: 600px;
 }
 
 .clients-container {
@@ -283,9 +288,9 @@ h1 {
 }
 .clients-container .slides {
   margin: auto 1%;
-  max-height: 200px;
+  height: 200px;
   width: auto;
-  align-self: center;
+  max-width: 30%;
 }
 
 @media (max-width: 768px) {
@@ -293,11 +298,15 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 400px;
+    overflow: hidden;
   }
   #clients .clients-container .slides {
-    max-height: 100px;
+    height: 100px;
     width: auto;
+    max-width: none;
     margin-bottom: 0.5em;
+    overflow: hidden;
   }
 }
 /* FOOTER */
@@ -361,11 +370,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  #contacts {
+    height: 650px;
+  }
+
   .footer-contents {
     display: flex;
     flex-direction: column;
   }
-  .footer-contents h6 {
+  .footer-contents .contact-details {
+    padding-top: 2em;
+  }
+  .footer-contents .contact-details h6 {
     font-size: 1em;
   }
   .footer-contents div {

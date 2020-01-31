@@ -84,6 +84,10 @@ h1 {
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
+    height: 150px;
+    li {
+      margin-top: 0.6em;
+    }
   }
 
   #navbar-icon {
@@ -286,6 +290,7 @@ h1 {
 #clients {
   margin: 1em;
   text-align: center;
+  height: 600px;
 }
 
 .clients-container {
@@ -297,11 +302,12 @@ h1 {
   align-content: center;
   .slides {
     margin: auto 1%;
-    max-height: 200px;
+    height: 200px;
     width: auto;
     // height: 100%;
     // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
-    align-self: center;
+   // align-self: center;
+   max-width: 30%;
   }
 }
 
@@ -311,10 +317,14 @@ h1 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 400px;
+      overflow: hidden;
       .slides {
-        max-height: 100px;
+        height: 100px;
         width: auto;
+        max-width: none;
         margin-bottom: 0.5em;
+        overflow: hidden;
       }
     }
   }
@@ -382,12 +392,18 @@ h1 {
 }
 
 @media (max-width: 768px) {
+#contacts {
+  height: 650px;
+}
   .footer-contents {
     display: flex;
     flex-direction: column;
+    .contact-details {
+      padding-top: 2em;
     h6 {
       font-size: 1em;
     }
+  }
     div {
       width: 100%;
       img {
@@ -395,5 +411,5 @@ h1 {
         margin-top: 1em;
       }
     }
-  }
+}
 }

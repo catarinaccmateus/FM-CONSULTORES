@@ -206,7 +206,22 @@ document.getElementById("navbar-icon").onclick = function () {
     x.style.display = "block";
     y.innerHTML = "<div class=first-line></div><div class=second-line></div>";
   }
-}; //To add less opacity in navbar when scrolling down
+}; //To hide menu when clicking on window.
+// ( .... ) Still need to write this code.
+
+
+document.getElementById('siteContent').addEventListener("click", hideMenu);
+
+function hideMenu() {
+  console.log('clicked!');
+  var x = document.getElementById("menu");
+  var y = document.getElementById("navbar-icon");
+
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    y.innerHTML = "<div></div><div></div><div></div>";
+  }
+} //To add less opacity in navbar when scrolling down
 
 
 var scrollpos = window.scrollY;
@@ -231,13 +246,12 @@ window.addEventListener("scroll", function () {
 }); //Client logos caroussel
 
 var slideIndex = 0;
-showSlides();
+var clientsCarousel = setInterval(showSlides, 1500);
 
 function showSlides() {
-  var i;
   var slides = document.getElementsByClassName("slides");
 
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
@@ -251,12 +265,48 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     slides[slideIndex].style.display = "block";
     slides[slideIndex + 1].style.display = "block";
-  } // console.log('index', slideIndex, 'length', slides.length);
+  } //setTimeout(showSlides, 500);
 
+} // PREVIOUS ATTEMPTS
+// 1.
+//This code is an alternative to the above. Instead of changing the display of the images, I would change the src of the three images.
+// This will make them all the time displayable and wouldn't make the window to jump up when scrolling down.
+// Due to the bundler from parcelJS changing the images folders and names, it was not possible to use this solution.
+// const arrayOfClientImages = [
+//   "atelier38.png",
+//   "ateliermedions.png",
+//   "b.leza.jpg",
+//   "contemporanea.png",
+//   "CVDB.jpg"
+// ];
+// let imageIndex = 0;
+// let clientsCarousel = setInterval(showImages, 500);
+// function showImages() {
+//   let firstImage = document.getElementById("firstImage");
+//   let secondImage = document.getElementById("secondImage");
+//   let thirdImage = document.getElementById("thirdImage");
+//   if (imageIndex < arrayOfClientImages.length - 3) {
+//     imageIndex++;
+//   } else {
+//     imageIndex = 0;
+//   }
+//   firstImage.alt = arrayOfClientImages[imageIndex];
+//   secondImage.alt = arrayOfClientImages[imageIndex + 1];
+//   thirdImage.alt = arrayOfClientImages[imageIndex + 2];
+//   firstImage.src = `./../../images/clients/${arrayOfClientImages[imageIndex]}`;
+//   secondImage.src = `./../../images/clients/${
+//     arrayOfClientImages[imageIndex + 1]
+//   }`;
+//   thirdImage.src = `./../../images/clients/${
+//     arrayOfClientImages[imageIndex + 2]
+//   }`;
+// }
 
-  setTimeout(showSlides, 500);
-}
-/*
+/* 
+2.
+The following code is if I wanted to have a carousel of images in the first container. I opted to take this option out since some images
+// may take some time to load what could compromise the first impression when accessing the site.
+
 //Title caroussel testing
 
 showSlides();
@@ -306,7 +356,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56722" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63698" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

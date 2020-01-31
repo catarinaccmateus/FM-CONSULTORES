@@ -290,7 +290,6 @@ h1 {
 #clients {
   margin: 1em;
   text-align: center;
-  height: 600px;
 }
 
 .clients-container {
@@ -313,6 +312,7 @@ h1 {
 
 @media (max-width: 768px) {
   #clients {
+    height: 600px;
     .clients-container {
       flex-direction: column;
       justify-content: center;

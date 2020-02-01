@@ -43,6 +43,13 @@ h1 {
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: 0;
+    font-weight: bold;
+  }
 }
 
 .lessOpacity {
@@ -90,7 +97,7 @@ h1 {
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
-    height: 150px;
+    height: 180px;
     border-radius: 0px 0px 0px 25px;
     li {
       margin-top: 0.6em;
@@ -246,6 +253,9 @@ h1 {
 @media (max-width: 768px) {
   #partners {
     padding: 0.5em;
+    h1 {
+      margin-bottom: 0em;
+    }
   }
 }
 
@@ -378,17 +388,6 @@ h1 {
   }
   .address-map {
     text-align: center;
-    #map-computer {
-      display: inherit;
-      width: 80%;
-      border-radius: 5px;
-      &:hover {
-        box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-      }
-    }
-    #map-mobile {
-      display: none;
-    }
     div {
       width: 50%;
     }
@@ -407,6 +406,19 @@ h1 {
   }
   .social-logo {
     width: 25px;
+  }
+}
+@media (min-width: 769px) {
+  #map-computer {
+    display: inherit;
+    width: 80%;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+    }
+  }
+  #map-mobile {
+    display: none;
   }
 }
 

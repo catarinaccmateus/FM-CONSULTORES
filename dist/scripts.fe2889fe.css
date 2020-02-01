@@ -40,6 +40,13 @@ h1 {
   position: fixed;
   width: 100%;
 }
+.navbar button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: 0;
+  font-weight: bold;
+}
 
 .lessOpacity {
   opacity: 0.85;
@@ -86,7 +93,7 @@ h1 {
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
-    height: 150px;
+    height: 180px;
     border-radius: 0px 0px 0px 25px;
   }
   #menu li {
@@ -237,6 +244,9 @@ h1 {
   #partners {
     padding: 0.5em;
   }
+  #partners h1 {
+    margin-bottom: 0em;
+  }
 }
 /* SERVICES CONTAINER */
 #services {
@@ -357,17 +367,6 @@ h1 {
 .footer-contents .address-map {
   text-align: center;
 }
-.footer-contents .address-map #map-computer {
-  display: inherit;
-  width: 80%;
-  border-radius: 5px;
-}
-.footer-contents .address-map #map-computer:hover {
-  box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-}
-.footer-contents .address-map #map-mobile {
-  display: none;
-}
 .footer-contents .address-map div {
   width: 50%;
 }
@@ -387,6 +386,20 @@ h1 {
   width: 25px;
 }
 
+@media (min-width: 769px) {
+  #map-computer {
+    display: inherit;
+    width: 80%;
+    border-radius: 5px;
+  }
+  #map-computer:hover {
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+  }
+
+  #map-mobile {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   #contacts {
     height: 100%;

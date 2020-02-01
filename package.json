@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/markup/layouts/layout.hbs --no-cache",
-    "build": "parcel build src/markup/layouts/layout.hbs --out-dir prod --public-url ./"
+    "dev": "parcel src/markup/layouts/index.hbs --no-cache",
+    "build": "parcel build src/markup/layouts/index.hbs --out-dir prod --public-url ./"
   },
   "keywords": [],
   "author": "",

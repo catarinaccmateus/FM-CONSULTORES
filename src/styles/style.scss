@@ -343,19 +343,22 @@ h1 {
 
 @media (max-width: 768px) {
   #clients {
-    height: 600px;
+    min-height: 600px;
+    height: 100%;
     .clients-container {
       flex-direction: column;
       justify-content: center;
+      //flex-wrap: wrap;
       align-items: center;
-      height: 400px;
-      overflow: hidden;
+      min-height: 400px;
+      height: 100%;
+     // overflow: hidden;
       .slides {
         height: 100px;
         width: auto;
         max-width: none;
         margin-bottom: 0.5em;
-        overflow: hidden;
+       // overflow: hidden;
       }
     }
   }

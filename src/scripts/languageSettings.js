@@ -1,4 +1,7 @@
-import {en, pt} from './content';
+//import {en, pt} from './content'; This content was replaced by a json object as shown below.
+
+const en = require('./../markup/data/en.json');
+const pt = require('./../markup/data/pt.json');
 
 document.getElementById('enSelect').addEventListener('click', englishWebsite);
 

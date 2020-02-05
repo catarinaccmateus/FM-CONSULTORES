@@ -1,7 +1,5 @@
 /* SET-UP */
 @import url("https://fonts.googleapis.com/css?family=Roboto|Gelasio&display=swap");
-$color-logo: #ffb400;
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -26,17 +24,14 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     margin-top: 1.5em;
-    font-size:2.5em;
+    font-size: 2.5em;
   }
 
   .smallerTitle {
     font-size: 2em;
   }
-
 }
-
 /* NAVBAR */
-
 .navbar {
   height: 70px;
   top: 0;
@@ -44,18 +39,18 @@ h1 {
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  background-color: $color-logo;
+  background-color: #ffb400;
   display: flex;
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  button {
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    background: 0;
-    font-weight: bold;
-  }
+}
+.navbar button {
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  background: 0;
+  font-weight: bold;
 }
 
 .lessOpacity {
@@ -73,10 +68,10 @@ h1 {
 
 .navbar-link {
   color: black;
-  &:hover {
-    color: white;
-    font-weight: bold;
-  }
+}
+.navbar-link:hover {
+  color: white;
+  font-weight: bold;
 }
 
 .fm-logo {
@@ -89,35 +84,37 @@ h1 {
   color: white;
   font-family: "Gelasio", serif;
   align-items: center;
-  div {
-    padding-left: 0;
-    margin-left: -1.6em;
-    font-size: 0.8em;
-  }
+}
+.logo-with-description div {
+  padding-left: 0;
+  margin-left: -1.6em;
+  font-size: 0.8em;
 }
 
 @keyframes menuslider {
-  from {width: 0}
-  to {width: 100px}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
 }
-
 @media (max-width: 768px) {
   #menu {
     display: none;
-    background-color: $color-logo;
+    background-color: #ffb400;
     padding: 1em;
     padding-top: 2em;
     line-height: 1.5em;
     height: 180px;
     border-radius: 0px 0px 0px 25px;
-    //width: 100px;
     animation-name: menuslider;
     animation-duration: 1s;
     overflow: hidden;
-    li {
-      margin-top: 0.6em;
-      width: 100px;
-    }
+  }
+  #menu li {
+    margin-top: 0.6em;
+    width: 100px;
   }
 
   #navbar-icon {
@@ -131,18 +128,18 @@ h1 {
     border: none;
     background: none;
     outline: none;
-    div {
-      width: 30px;
-      height: 4px;
-      background-color: black;
-      margin: 4px 0;
-    }
+  }
+  #navbar-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 4px 0;
   }
 }
-
 .first-line {
   transform: translateY(8px) rotate(135deg);
 }
+
 .second-line {
   transform: rotate(-135deg);
 }
@@ -150,34 +147,33 @@ h1 {
 @media (min-width: 769px) {
   #menu {
     display: flex !important;
-    li {
-      padding: 0.5em;
-    }
   }
+  #menu li {
+    padding: 0.5em;
+  }
+
   #navbar-icon {
     display: none !important;
   }
 }
-
 /* TITLE CONTAINER */
-
 .title-container {
   margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 580px;
-  h1 {
-    text-align: center;
-    font-size: 2em;
-    text-shadow: 2px 2px 2px $color-logo;
-    font-family: "Gelasio", serif;
-    font-weight: 100;
-    margin: 0.5em;
-  }
-  img {
-    width: 100%;
-  }
+}
+.title-container h1 {
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 2px 2px 2px #ffb400;
+  font-family: "Gelasio", serif;
+  font-weight: 100;
+  margin: 0.5em;
+}
+.title-container img {
+  width: 100%;
 }
 
 /* TESTING HOW TO ADD CAROUSEL TO THE BACKGROUND IMAGE OF THE TITLE CONTAINER
@@ -202,21 +198,18 @@ h1 {
   background-size: cover;
 }
 */
-
 @media (min-width: 769px) {
   .title-container {
     height: 640px;
-    h1 {
-      font-size: 4em;
-    }
-    img {
-      width: 60%;
-    }
+  }
+  .title-container h1 {
+    font-size: 4em;
+  }
+  .title-container img {
+    width: 60%;
   }
 }
-
 /* ABOUT CONTAINER */
-
 #about {
   padding: 4em;
   background-color: #d5d4dc;
@@ -226,15 +219,15 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  div {
-    margin-top: 2em;
-    font-size: 1em;
-    line-height: 2em;
-    p {
-      margin: 0;
-      text-align: justify;
-    }
-  }
+}
+#about div {
+  margin-top: 2em;
+  font-size: 1em;
+  line-height: 2em;
+}
+#about div p {
+  margin: 0;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -243,9 +236,7 @@ h1 {
     text-align: justify;
   }
 }
-
 /* PARTNERS CONTAINER */
-
 #partners {
   background-color: #d5d4dc;
   color: black;
@@ -258,35 +249,33 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    li {
-      width: 30%;
-      padding: 0.5em;
-      margin: 0.5em;
-      text-align: center;
-    }
-    li:hover {
-      text-shadow: 2px 2px 4px white;
-    }
-  }
+}
+#partners ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+#partners ul li {
+  width: 30%;
+  padding: 0.5em;
+  margin: 0.5em;
+  text-align: center;
+}
+#partners ul li:hover {
+  text-shadow: 2px 2px 4px white;
 }
 
 @media (max-width: 768px) {
   #partners {
     padding: 0.5em;
-    h1 {
-      margin-bottom: 0em;
-    }
+  }
+  #partners h1 {
+    margin-bottom: 0em;
   }
 }
-
 /* SERVICES CONTAINER */
-
 #services {
   margin: 1em;
   display: flex;
@@ -300,19 +289,19 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  div {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    div {
-      text-align: center;
-    }
-  }
-  img {
-    max-width: 100px;
-  }
+}
+.services-container div {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.services-container div div {
+  text-align: center;
+}
+.services-container img {
+  max-width: 100px;
 }
 
 @media (max-width: 768px) {
@@ -320,15 +309,12 @@ h1 {
     width: 40%;
   }
 }
-
 @media (min-width: 869px) {
   .services-container div {
     width: 15%;
   }
 }
-
 /* CLIENTS */
-
 #clients {
   margin: 1em;
   text-align: center;
@@ -344,50 +330,39 @@ h1 {
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  .slides {
-    margin: auto 1%;
-    height: 200px;
-    width: auto;
-    // height: 100%;
-    // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
-    // align-self: center;
-    max-width: 30%;
-  }
+}
+.clients-container .slides {
+  margin: auto 1%;
+  height: 200px;
+  width: auto;
+  max-width: 30%;
 }
 
 @media (min-width: 769px) {
-  #clients {
-    p {
-      margin-bottom: 4em;
-    }
+  #clients p {
+    margin-bottom: 4em;
   }
 }
-
 @media (max-width: 768px) {
   #clients {
     min-height: 600px;
     height: 100%;
-    .clients-container {
-      flex-direction: column;
-      justify-content: center;
-      //flex-wrap: wrap;
-      align-items: center;
-      min-height: 400px;
-      height: 100%;
-     // overflow: hidden;
-      .slides {
-        height: 100px;
-        width: auto;
-        max-width: none;
-        margin-bottom: 0.5em;
-       // overflow: hidden;
-      }
-    }
+  }
+  #clients .clients-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    height: 100%;
+  }
+  #clients .clients-container .slides {
+    height: 100px;
+    width: auto;
+    max-width: none;
+    margin-bottom: 0.5em;
   }
 }
-
 /* FOOTER */
-
 #contacts {
   left: 0;
   bottom: 0;
@@ -403,81 +378,83 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 1em;
-  .contact-details {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    div {
-      margin-bottom: 1em;
-      h6 {
-        color: $color-logo;
-      }
-      .email-link {
-        color: white;
-      }
-    }
-  }
-  .address-map {
-    text-align: center;
-    div {
-      width: 50%;
-    }
-    div {
-      margin-top: 1em;
-    }
-  }
-  h6 {
-    margin-top: 1em;
-    margin-bottom: 0;
-    font-size: 1.5em;
-  }
-  p {
-    margin-top: 1em;
-    margin-bottom: 0;
-  }
-  .social-logo {
-    width: 25px;
-  }
 }
+.footer-contents .contact-details {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.footer-contents .contact-details div {
+  margin-bottom: 1em;
+}
+.footer-contents .contact-details div h6 {
+  color: #ffb400;
+}
+.footer-contents .contact-details div .email-link {
+  color: white;
+}
+.footer-contents .address-map {
+  text-align: center;
+}
+.footer-contents .address-map div {
+  width: 50%;
+}
+.footer-contents .address-map div {
+  margin-top: 1em;
+}
+.footer-contents h6 {
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+.footer-contents p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.footer-contents .social-logo {
+  width: 25px;
+}
+
 @media (min-width: 769px) {
   #map-computer {
     display: inherit;
     width: 80%;
     border-radius: 5px;
-    &:hover {
-      box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-    }
   }
+  #map-computer:hover {
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+  }
+
   #map-mobile {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   #contacts {
     height: 100%;
-
-    .footer-contents {
-      display: flex;
-      flex-direction: column;
-      .contact-details {
-        padding-top: 2em;
-        h6 {
-          font-size: 1em;
-        }
-      }
-      div {
-        width: 100%;
-        #map-mobile {
-          width: 90%;
-          margin-top: 1em;
-          display: inherit;
-          border-radius: 5px;
-        }
-        #map-computer {
-          display: none;
-        }
-      }
-    }
+  }
+  #contacts .footer-contents {
+    display: flex;
+    flex-direction: column;
+  }
+  #contacts .footer-contents .contact-details {
+    padding-top: 2em;
+  }
+  #contacts .footer-contents .contact-details h6 {
+    font-size: 1em;
+  }
+  #contacts .footer-contents div {
+    width: 100%;
+  }
+  #contacts .footer-contents div #map-mobile {
+    width: 90%;
+    margin-top: 1em;
+    display: inherit;
+    border-radius: 5px;
+  }
+  #contacts .footer-contents div #map-computer {
+    display: none;
   }
 }
+
+/*# sourceMappingURL=/scripts.fe2889fe.css.map */

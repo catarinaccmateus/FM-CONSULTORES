@@ -26,13 +26,12 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     margin-top: 1.5em;
-    font-size:2.5em;
+    font-size: 2.5em;
   }
 
   .smallerTitle {
     font-size: 2em;
   }
-
 }
 
 /* NAVBAR */
@@ -97,8 +96,12 @@ h1 {
 }
 
 @keyframes menuslider {
-  from {width: 0}
-  to {width: 100px}
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -249,15 +252,19 @@ h1 {
 #partners {
   background-color: #d5d4dc;
   color: black;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  //For some reason the display flex in this container is not working in Internet Explorer so we will center its content with text-align and margin.
+  // display: -webkit-flex;
+  // display: -ms-flexbox;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  text-align: center;
+  margin: auto;
   padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  h1 {
+    padding-top: 1em;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -281,6 +288,10 @@ h1 {
     padding: 0.5em;
     h1 {
       margin-bottom: 0em;
+      padding-top: 0.5em;
+    }
+    ul li {
+      width: 38%;
     }
   }
 }
@@ -374,13 +385,13 @@ h1 {
       align-items: center;
       min-height: 400px;
       height: 100%;
-     // overflow: hidden;
+      // overflow: hidden;
       .slides {
         height: 100px;
         width: auto;
         max-width: none;
         margin-bottom: 0.5em;
-       // overflow: hidden;
+        // overflow: hidden;
       }
     }
   }

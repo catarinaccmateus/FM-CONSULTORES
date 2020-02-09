@@ -47,6 +47,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 100;
   width: 100%;
   button {
     border: 0;
@@ -54,6 +55,9 @@ h1 {
     font-family: inherit;
     background: 0;
     font-weight: bold;
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -163,23 +167,88 @@ h1 {
 }
 
 /* TITLE CONTAINER */
+@keyframes displaceContentHorizontally {
+  from {
+    transform: translateX(-800px);
+  }
+  to {
+    transform: translateX(0px);
+  } /* slide down to make room for advertisements */
+}
+
+@keyframes displaceContentVertically {
+  from {
+    transform: translateY(-800px);
+  }
+  to {
+    transform: translateY(0px);
+  } /* slide down to make room for advertisements */
+}
+
+@keyframes greyBackground {
+  from {
+   background-color: rgb(213, 212, 220, 0);
+  }
+  to {
+    background-color: rgb(213, 212, 220, 0.3);
+  } /* slide down to make room for advertisements */
+}
 
 .title-container {
+  height: 640px;
   margin-top: 70px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 580px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: grey;
+  background-image: url("./../images/entrada-alargada.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
   h1 {
-    text-align: center;
-    font-size: 2em;
-    text-shadow: 2px 2px 2px $color-logo;
-    font-family: "Gelasio", serif;
-    font-weight: 100;
-    margin: 0.5em;
+    text-align: justify;
+    font-size: 2.5em;
+    color: white;
+    overflow: hidden;
+    //font-family: "Gelasio", serif;
+    font-weight: bold;
+    margin: 1em;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    border-radius: 25px;
+    width: 50%;
+    animation: displaceContentHorizontally 1.5s, greyBackground 2s linear 2s;
+    animation-fill-mode: forwards;
   }
   img {
-    width: 100%;
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .title-container {
+    height: 580px;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: left; /* Center the image */
+    h1 {
+      text-align: justify;
+      font-size: 1.5em;
+      margin:0.5em;
+      width: 90%;
+      padding-left:1em;
+      padding-bottom: 0.5em;
+      padding-right: 0.4em;
+      padding-top:0.5em;
+      margin-bottom:2.5em;
+      border-radius: 25px;
+      animation: displaceContentVertically 1.5s, greyBackground 2s linear 2s;
+      animation-fill-mode: forwards;
+    }
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -206,22 +275,10 @@ h1 {
 }
 */
 
-@media (min-width: 769px) {
-  .title-container {
-    height: 640px;
-    h1 {
-      font-size: 4em;
-    }
-    img {
-      width: 60%;
-    }
-  }
-}
-
 /* ABOUT CONTAINER */
 
 #about {
-  padding: 4em;
+  padding: 2em;
   background-color: #d5d4dc;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,6 +380,10 @@ h1 {
   }
   img {
     max-width: 100px;
+    &:hover {
+      transform: scale(1.3);
+      z-index: -1;
+    }
   }
 }
 

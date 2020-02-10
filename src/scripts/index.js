@@ -77,6 +77,21 @@ function showSlides() {
   //setTimeout(showSlides, 500);
 }
 
+// Images from services to show when scrolling down
+
+let imageServices = document.getElementsByClassName('individual-service');
+
+var observer = new IntersectionObserver(function(entries) {
+  if(entries[0].isIntersecting === true) {
+      console.log('Element has just become visible in screen');
+      for (let i = 0; i <imageServices.length; i++) {
+        imageServices[i].classList.add('is-visible');
+      }
+      }
+}, { threshold: [0] });
+
+observer.observe(document.querySelector(".individual-service"));
+
 // PREVIOUS ATTEMPTS
 
 // 1.

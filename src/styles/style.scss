@@ -16,7 +16,14 @@ li {
 }
 
 .container {
-  min-height: 600px;
+  height: 600px;
+}
+
+@media (max-width: 1008px) {
+  .container {
+    min-height: 600px;
+    height: auto;
+  }
 }
 
 h1 {
@@ -173,7 +180,7 @@ h1 {
   }
   to {
     transform: translateX(0px);
-  } /* slide down to make room for advertisements */
+  } 
 }
 
 @keyframes displaceContentVertically {
@@ -182,7 +189,7 @@ h1 {
   }
   to {
     transform: translateY(0px);
-  } /* slide down to make room for advertisements */
+  } 
 }
 
 @keyframes greyBackground {
@@ -191,7 +198,7 @@ h1 {
   }
   to {
     background-color: rgb(213, 212, 220, 0.3);
-  } /* slide down to make room for advertisements */
+  } 
 }
 
 .title-container {
@@ -207,19 +214,22 @@ h1 {
   background-size: cover;
   h1 {
     text-align: justify;
-    font-size: 2.5em;
+    font-size: 2em;
     color: white;
     overflow: hidden;
-    //font-family: "Gelasio", serif;
     font-weight: bold;
-    text-indent: 1em;
     margin: 1em;
     padding: 0.5em;
     margin-bottom: 1.5em;
-    border-radius: 15px;
     width: 50%;
     animation: displaceContentHorizontally 1.5s, greyBackground 2s linear 2s;
     animation-fill-mode: forwards;
+    p {
+      margin: 0em;
+      text-indent: 1em;
+      font-style: oblique;
+      color:  #f2f2f2;
+    }
   }
   img {
     width: 30%;
@@ -250,28 +260,6 @@ h1 {
   }
 }
 
-/* TESTING HOW TO ADD CAROUSEL TO THE BACKGROUND IMAGE OF THE TITLE CONTAINER
-
-.background-image-1 {
-  background-image: url('./../images/fm-diagram.jpg');
-  background-size: cover;
-}
-
-.background-image-2 {
-  background-image: url('./../images/fm-entrance.jpg');
-  background-size: cover;
-}
-
-.background-image-3 {
-  background-image: url('./../images/FM-CARTA.jpg');
-  background-size: cover;
-}
-
-.background-image-4 {
-  background-image: url('./../images/fm-archives.jpg');
-  background-size: cover;
-}
-*/
 
 /* ABOUT CONTAINER */
 
@@ -307,13 +295,6 @@ h1 {
 #partners {
   background-color: #d5d4dc;
   color: black;
-  //For some reason the display flex in this container is not working in Internet Explorer so we will center its content with text-align and margin.
-  // display: -webkit-flex;
-  // display: -ms-flexbox;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
   text-align: center;
   margin: auto;
   padding: 1em;
@@ -381,7 +362,6 @@ h1 {
   }
 }
 
-
 @media (max-width: 768px) {
   .services-container div {
     width: 40%;
@@ -404,9 +384,8 @@ h1 {
 }
 
 .is-visible {
-  animation: showImage 1s;
+  animation: showImage 1.5s;
 }
-
 
 /* CLIENTS */
 
@@ -426,12 +405,10 @@ h1 {
   align-items: center;
   align-content: center;
   .slides {
+    display: none;
     margin: auto 1%;
     height: 200px;
     width: auto;
-    // height: 100%;
-    // height auto doesn't work on chrome. The alternative to avoid distortion is to write height: 100% or align-self: center
-    // align-self: center;
     max-width: 30%;
   }
 }
@@ -481,7 +458,7 @@ h1 {
 .footer-contents {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 1em;
   .contact-details {
@@ -496,15 +473,21 @@ h1 {
       .email-link {
         color: white;
       }
+      #contact-email {
+        text-decoration: underline;
+      }
     }
   }
   .address-map {
     text-align: center;
-    div {
-      width: 50%;
-    }
-    div {
+    #google-map {
       margin-top: 1em;
+      width: 600px;
+      height: 450px;
+      border-radius: 5px;
+      &:hover {
+        box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+      }
     }
   }
   h6 {
@@ -520,19 +503,7 @@ h1 {
     width: 25px;
   }
 }
-@media (min-width: 769px) {
-  #map-computer {
-    display: inherit;
-    width: 80%;
-    border-radius: 5px;
-    &:hover {
-      box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
-    }
-  }
-  #map-mobile {
-    display: none;
-  }
-}
+
 
 @media (max-width: 768px) {
   #contacts {
@@ -549,17 +520,13 @@ h1 {
       }
       div {
         width: 100%;
-        #map-mobile {
+        #google-map {
           width: 90%;
-          margin-top: 1em;
+          margin: 1em auto;
           display: inherit;
           border-radius: 5px;
-        }
-        #map-computer {
-          display: none;
-        }
       }
     }
   }
 }
-
+}

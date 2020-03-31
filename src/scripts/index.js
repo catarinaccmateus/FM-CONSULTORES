@@ -74,7 +74,6 @@ function showSlides() {
     slides[slideIndex].style.display = "block";
     slides[slideIndex + 1].style.display = "block";
   }
-  //setTimeout(showSlides, 500);
 }
 
 // Images from services to show when scrolling down
